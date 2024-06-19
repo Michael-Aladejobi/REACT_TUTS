@@ -1684,7 +1684,7 @@ reportWebVitals();
 
 -   remove in src
 
-    -   setupTests.js 
+    -   setupTests.js
     -   reportWebVitals.js
     -   App.test.js
 
