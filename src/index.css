@@ -15,10 +15,11 @@ body {
 @media screen and (min-width: 768px) {
     .booklist {
         grid-template-columns: repeat(3, 1fr);
+        align-items: start;
     }
 }
 .book {
-    background: #fff;
+    background: #cfcccc;
     border-radius: 1rem;
     padding: 2rem;
     text-align: center;
@@ -36,4 +37,14 @@ body {
     display: grid;
     gap: 2rem;
     text-align: center;
+}
+
+.book p {
+    margin: 1rem 0 0.5rem;
+}
+
+.book button{
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
 }

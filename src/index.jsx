@@ -14,6 +14,18 @@ const secondBook = {
     img: "https://m.media-amazon.com/images/I/41Wts36fLcL._AC_UL320_.jpg",
 };
 
+const Book = (props) => {
+    const { img, title, author, children } = props;
+    console.log(props);
+    return (
+        <article className='book'>
+            <img src={img} alt={title} />
+            <h2>{title}</h2>
+            <h4>{author}</h4>
+            {children}
+        </article>
+    );
+};
 function BookList() {
     return (
         <section className='booklist'>
@@ -21,7 +33,14 @@ function BookList() {
                 author={firstBook.author}
                 title={firstBook.title}
                 img={firstBook.img}
-            />
+            >
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Odit perspiciatis blanditiis ut, magni similique laborum
+                    aliquid natus illo enim et?
+                </p>
+                <button>Click Me</button>
+            </Book>
             <Book
                 author={secondBook.author}
                 title={secondBook.title}
@@ -30,18 +49,6 @@ function BookList() {
         </section>
     );
 }
-
-const Book = (props) => {
-    const { img, title, author } = props;
-    console.log(props);
-    return (
-        <article className='book'>
-            <img src={img} alt={title} />
-            <h2>{title}</h2>
-            <h4>{author}</h4>
-        </article>
-    );
-};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
