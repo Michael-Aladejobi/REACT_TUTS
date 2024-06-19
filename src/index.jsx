@@ -39,7 +39,9 @@ function BookList() {
                     Odit perspiciatis blanditiis ut, magni similique laborum
                     aliquid natus illo enim et?
                 </p>
-                <button>Click Me</button>
+                <a href='https://github.com/michael-aladejobi' target='_blank'>
+                    <button>Click Me</button>
+                </a>
             </Book>
             <Book
                 author={secondBook.author}
