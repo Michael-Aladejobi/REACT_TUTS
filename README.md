@@ -204,7 +204,7 @@ return <>...rest of the return</>;
 
 -   camelCase property naming convention
 
-```js
+```js 
 return (
   <div tabIndex={1}>
     <button onClick={myFunction}>click me</button>
