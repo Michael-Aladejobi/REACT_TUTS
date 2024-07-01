@@ -1,19 +1,35 @@
 import ReactDOM from "react-dom/client";
 
-const Ett = () => {
-    return <>
-        <Div1 />
-        <Div1 />
-    </>;
-};
+const img = "./ai.png";
+const title = "TITLE";
+const author = "AUTHOR";
 
-const Div1 = () => {
+const BookList = () => {
     return (
-        <h1>
-            <div>div 1</div>
-        </h1>
+        <section>
+            <Book />
+        </section>
     );
 };
 
+const Book = () => {
+    return (
+        <article>
+            <Image />
+            <Title />
+            <Author />
+        </article>
+    );
+};
+const Image = () => {
+    return <img src={img} alt='img placeholder' />;
+};
+const Title = () => {
+    return <h2>{title}</h2>;
+};
+const Author = () => {
+    return <h2>{author}</h2>;
+};
+
 const root = ReactDOM.createRoot(document.querySelector("#root"));
-root.render(<Ett />);
+root.render(<BookList />);
