@@ -35,7 +35,7 @@ const Title = () => {
     return <h2>{title}</h2>;
 };
 const Author = () => {
-    return <h4>{author}</h4>;
+    return <h4 style={{color:'red', fontSize:'0.75rem'}}>{author}</h4>;
 };
 
 const root = ReactDOM.createRoot(document.querySelector("#root"));
