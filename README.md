@@ -561,7 +561,7 @@ const Book = () => {
             />
             <h2>{title}</h2>
 
-            <h4>{author.toUpperCase()} </h4>
+            // <h4>{author.toUpperCase()} </h4>
             {/* <p>{let x = 6}</p> */}
             <p>{6 + 6}</p>
         </article>
