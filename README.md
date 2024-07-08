@@ -550,7 +550,7 @@ const Book = () => {
     can't be a statement
 
 ```js
-const author = "Jordan Moore";
+const author = "Jordan Moore"; 
 const Book = () => {
     const title = "Interesting Facts For Curious Mindssssss";
     return (

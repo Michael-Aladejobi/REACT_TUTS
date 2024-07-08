@@ -1,14 +1,9 @@
 import ReactDOM from "react-dom/client";
-import "./index.css"
-
-const img =
-    "https://images-na.ssl-images-amazon.com/images/I/71m+Qtq+HrL._AC_UL900_SR900,600_.jpg";
-const title = "Interesting Facts For Curious Minds";
-const author = "Jordan Moore  ";
+import "./index.css";
 
 const BookList = () => {
     return (
-        <section className="booklist">
+        <section className='booklist'>
             <Book />
             <Book />
             <Book />
@@ -20,22 +15,18 @@ const BookList = () => {
 };
 
 const Book = () => {
+    const img =
+        "https://images-na.ssl-images-amazon.com/images/I/71m+Qtq+HrL._AC_UL900_SR900,600_.jpg";
+    const title = "Interesting Facts For Curious Minds";
+    const author = "Jordan Moore  ";
+
     return (
-        <article className="book">
-            <Image />
-            <Title />
-            <Author />
+        <article className='book'>
+            <img src={img} alt='image'/>
+            <h2>{title}</h2>
+            <h4>{author.toUpperCase()}</h4>
         </article>
     );
-};
-const Image = () => {
-    return <img src={img} alt='img placeholder' />;
-};
-const Title = () => {
-    return <h2>{title}</h2>;
-};
-const Author = () => {
-    return <h4 style={{color:'red', fontSize:'0.75rem'}}>{author}</h4>;
 };
 
 const root = ReactDOM.createRoot(document.querySelector("#root"));
