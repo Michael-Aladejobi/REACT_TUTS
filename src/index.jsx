@@ -21,7 +21,7 @@ const BookList = () => {
             {books.map((book) => {
                 const { author, title, img } = book;
                 return (
-                <Book img={img} title={title} author={author} />
+                <Book {...book} />
                 );
             })}
         </section>
