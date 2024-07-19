@@ -1,40 +1,39 @@
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import { Children } from "react";
 
-const firstBook = {
-    author: "Jordan Moore",
-    title: "Interesting Facts For Curious Minds",
-    img: "https://images-na.ssl-images-amazon.com/images/I/71m+Qtq+HrL._AC_UL900_SR900,600_.jpg",
-};
-const secondBook = {
-    author: "James Clear",
-    title: "Atomic Habits",
-    img: "https://images-na.ssl-images-amazon.com/images/I/81wgcld4wxL._AC_UL900_SR900,600_.jpg",
-};
+const books = [
+    {
+        author: "Jordan Moore",
+        title: "Interesting Facts For Curious Minds",
+        img: "https://images-na.ssl-images-amazon.com/images/I/71m+Qtq+HrL._AC_UL900_SR900,600_.jpg",
+    },
+    {
+        author: "James Clear",
+        title: "Atomic Habits",
+        img: "https://images-na.ssl-images-amazon.com/images/I/81wgcld4wxL._AC_UL900_SR900,600_.jpg",
+    },
+];
 
 const BookList = () => {
     return (
-        <section className='booklist'>
-            <Book
-                author={firstBook.author}
-                title={firstBook.title}
-                img={firstBook.img}
-            />
-            <Book
-                author={secondBook.author}
-                title={secondBook.title}
-                img={secondBook.img}
-            />
+        <section className="booklist">
+            {books.map((book) => {
+                const { author, title, img } = book;
+                return (
+                <Book img={img} title={title} author={author} />
+                );
+            })}
         </section>
     );
 };
 
 const Book = (props) => {
     console.log(props);
-    const {author, title, img} = props;
+    const { author, title, img } = props;
     return (
-        <article className='book'>
-            <img src={img} alt='image' />
+        <article className="book">
+            <img src={img} alt="images" />
             <h2>{title}</h2>
             <h4>{author}</h4>
         </article>
