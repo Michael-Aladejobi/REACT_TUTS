@@ -21,7 +21,10 @@ const BookList = () => {
             {books.map((book) => {
                 const { author, title, img } = book;
                 return (
-                <Book {...book} />
+                    <>
+                        <Book {...book} />
+                        <button/>
+                    </>
                 );
             })}
         </section>
@@ -40,5 +43,11 @@ const Book = (props) => {
     );
 };
 
+const button = () => {
+    const result = () => {
+        alert("button clicked");
+    };
+    return <button>click me</button>;
+};
 const root = ReactDOM.createRoot(document.querySelector("#root"));
 root.render(<BookList />);
