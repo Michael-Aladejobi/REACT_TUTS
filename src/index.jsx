@@ -23,7 +23,7 @@ const BookList = () => {
                 return (
                     <>
                         <Book {...book} />
-                        <button/>
+                        <button />
                     </>
                 );
             })}
