@@ -18,9 +18,8 @@ const books = [
 ];
 
 const BookList = () => {
-    const someValue = "shakeAndBake";
     const displayValue = () => {
-        console.log(someValue);
+        console.log("shakeAndBake");
     };
 
     return (
