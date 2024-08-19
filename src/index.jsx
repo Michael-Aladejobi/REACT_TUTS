@@ -24,7 +24,7 @@ const Book = (props) => {
         <article className="book">
             <img src={img} alt="images" />
             <h2>{title}</h2>
-            <button>click me</button>
+            <button>click </button>
             <h4>{author}</h4>
         </article>
     );
